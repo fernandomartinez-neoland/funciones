@@ -40,11 +40,11 @@ otro();
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 
-let numeroA=4;
-let numeroB=5
+let numeroA = 4;
+let numeroB = 5
 // a las funciones se le pueden enviar datos (valores string, numericos, booleanos, etc, incluso otras funciones... pero eso de enviar funciones como parametros lo veremos en otra clase jeje... <inserte emoji malvado>)
 // en este caso enviaremos 2 variables, cada variable tiene su valor, la funcion recibira directamente el valor de cada variable y se lo asignara a una variable interna (las variables que se encuentran dentro del parentesis, en el mismo orden en el que son enviadas)
-suma( numeroA, numeroB);
+suma(numeroA, numeroB);
 
 
 // al declarar una funcion, se pueden declarar variables dentro de los paremetros
@@ -53,9 +53,9 @@ suma( numeroA, numeroB);
 //      2) estas se les puede asignar un valor inicial que cambiara en cuanto reciban un valor desde la llamada
 //      3) esta variable existe UNICA Y EXCLUSIVAMENTE dentro de la funcion, es decir que solo se puede usar dentro de la funcion, al terminar la funcion esta funcion muere, deja de existir y si intentas usarla fuera de la funcion te saldra un error indicando que la variable no ha sido definida
 //      4) aunque llames a la variable con el mismo nombre que la variable variable que enviaste durante el llamado de la funcion, se tratan como 2 objetos separados, de igual manera que aunque 2 personas tengan el mismo modelo de telefono, ambos son objetos diferentes, asi mismo como cuando en un trabajo el jefe te usa como recadero
-function suma(numA, numB){
-    numA=numB+3;
-    console.log(numA+ numB)
+function suma(numA, numB) {
+    numA = numB + 3;
+    console.log(numA + numB)
 }
 
 
@@ -65,15 +65,15 @@ function suma(numA, numB){
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 
-const nombre="fernando"
-const apellido="martinez"
+const nombre = "fernando"
+const apellido = "martinez"
 
 
-function cadena(name, apellido){
-// las funciones con retorno usan la palabra reservada "return" para devolver un valor cada que se les llama, esta usa generalmente cuadno queremos hacer una especie de transaccion de informacion, digase que le damos algo a la funcion y esta nos retorna algun valor, como cuando vas a comprar algo, el parametro es el dinero y el retorno es el producto o servicio
-// en este caso la funcion solicita un nombre y un apellido como pago y retorna un texto
-// nombre esta representado por la variable INTERNA llamada "name" y aunque la variable INTERNA diga apellido como la externa, NO son la misma variable, esta solo recibe el valor de la externa
-    return "el nombre es: "+name +" "+apellido
+function cadena(name, apellido) {
+    // las funciones con retorno usan la palabra reservada "return" para devolver un valor cada que se les llama, esta usa generalmente cuadno queremos hacer una especie de transaccion de informacion, digase que le damos algo a la funcion y esta nos retorna algun valor, como cuando vas a comprar algo, el parametro es el dinero y el retorno es el producto o servicio
+    // en este caso la funcion solicita un nombre y un apellido como pago y retorna un texto
+    // nombre esta representado por la variable INTERNA llamada "name" y aunque la variable INTERNA diga apellido como la externa, NO son la misma variable, esta solo recibe el valor de la externa
+    return "el nombre es: " + name + " " + apellido
 }
 
 // aqui llamamos a la funcion "cadena" y como parametro le enviamos 2 variables, "nombre" y "apellido", cada una tiene un valor propio y este valor es lo que esta recibiendo la funcion
@@ -83,3 +83,19 @@ const imprimir = cadena(nombre, apellido)
 // para comprobar imprimimos la variable que contiene a la funcion y esta debe imprimir el valor de la funcion
 // asi como podemos decir "variable=funcion" podemos usar a la funcion de la misma manera en la que se usa una variable comun y corriente, con lo cual "console.log(imprimir)" es lo mismo que decir "console.log(cadena(nombre, apellido))"
 console.log(imprimir)
+
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+//////////////funciones llamada desde el html///////////////////////
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+function enviar(e) {
+    e.preventDefault();
+    // console.log(e.target.numA.value)
+    // console.log(e.target.numB.value)
+    const numA=parseInt(e.target.numA.value) 
+    const numB=parseInt(e.target.numB.value)
+    console.log(numA + numB)
+}
