@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- aqui estamos usando la propiedad "onsubmit" para llamar a una funcion de nuestro js
+     recordar que el js esta siendo llamado en la etiqueta "<script>"
+        estamos llamando a la funcion "enviar", la cual esta recibiendo como parametro "event"
+        este parametro captura cada elemento y cada accion dentro del formulario -->
     <form onsubmit="enviar(event)">
         <input type="number" name="numA" placeholder="Numero A">
         <input type="number" name="numB" placeholder="Numero B">

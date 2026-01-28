@@ -93,8 +93,7 @@ console.log(imprimir)
 
 function enviar(e) {
     e.preventDefault();
-    // console.log(e.target.numA.value)
-    // console.log(e.target.numB.value)
+
     const numA=parseInt(e.target.numA.value) 
     const numB=parseInt(e.target.numB.value)
     console.log(numA + numB)
