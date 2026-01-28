@@ -91,9 +91,14 @@ console.log(imprimir)
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 
+// esta funcion recibe como parametro, todos los eventos provenientes del formulario y los almacena en la variable "e", que usamos para referirnos a "event"
+
 function enviar(e) {
+    //  usamos "e.preventDefault();" para evitar que el formulario al enviarse refresque la pantalla
     e.preventDefault();
 
+    // aprovechando la variable "e", usamos la propiedad "target" para hacer referencia a objetivo o seleccion de un elemento, seguido del nombre del elemento (nombre que colocamos en html en la propiedad "name"), por utimo capturamos el valor con "value"
+    // recordar que todos los valores capturados de cualquier tipo de input pasan a ser automaticamente de tipo texto, con lo cual al sumarlos se hace una concatenación y es por eso que usamo el parseInt en este caso, para poder sumar ambos numeros
     const numA=parseInt(e.target.numA.value) 
     const numB=parseInt(e.target.numB.value)
     console.log(numA + numB)
