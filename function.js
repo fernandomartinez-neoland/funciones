@@ -42,8 +42,17 @@ otro();
 
 let numeroA=4;
 let numeroB=5
+// a las funciones se le pueden enviar datos (valores string, numericos, booleanos, etc, incluso otras funciones... pero eso de enviar funciones como parametros lo veremos en otra clase jeje... <inserte emoji malvado>)
+// en este caso enviaremos 2 variables, cada variable tiene su valor, la funcion recibira directamente el valor de cada variable y se lo asignara a una variable interna (las variables que se encuentran dentro del parentesis, en el mismo orden en el que son enviadas)
 suma( numeroA, numeroB);
 
+
+// al declarar una funcion, se pueden declarar variables dentro de los paremetros
+// estas variables cumplen con las siguientes condiciones especiales:
+//      1) no requieren de const o let para ser declaradas
+//      2) estas se les puede asignar un valor inicial que cambiara en cuanto reciban un valor desde la llamada
+//      3) esta variable existe UNICA Y EXCLUSIVAMENTE dentro de la funcion, es decir que solo se puede usar dentro de la funcion, al terminar la funcion esta funcion muere, deja de existir y si intentas usarla fuera de la funcion te saldra un error indicando que la variable no ha sido definida
+//      4) aunque llames a la variable con el mismo nombre que la variable variable que enviaste durante el llamado de la funcion, se tratan como 2 objetos separados, de igual manera que aunque 2 personas tengan el mismo modelo de telefono, ambos son objetos diferentes, asi mismo como cuando en un trabajo el jefe te usa como recadero
 function suma(numA, numB){
     numA=numB+3;
     console.log(numA+ numB)
