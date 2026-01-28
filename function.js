@@ -1,6 +1,7 @@
 console.log("holi linea 1")
 
-saludo()
+saludo();
+
 
 console.log("eso se ejecutara despues de la funcion de abajo")
 
@@ -11,9 +12,12 @@ console.log("eso se ejecutara despues de la funcion de abajo")
 //      4)seguido de llaves, que es donde ejecutaremos nuestras acciones, en este caos imprimir en consola
 
 
-function saludo(){
+function saludo() {
     console.log("holi linea 6")
 }
 
-
-  
+// si queremos crear una funcion de flecha primero tenemos declarra una variable, en este caso toca llamar a la variable despues de la declaracion y a la variable se le asigna la funcion de flecha
+const otro = () => {
+ console.log("funcion de flecha")
+}
+otro();
