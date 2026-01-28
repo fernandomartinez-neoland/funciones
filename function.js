@@ -70,10 +70,16 @@ const apellido="martinez"
 
 
 function cadena(name, apellido){
+// las funciones con retorno usan la palabra reservada "return" para devolver un valor cada que se les llama, esta usa generalmente cuadno queremos hacer una especie de transaccion de informacion, digase que le damos algo a la funcion y esta nos retorna algun valor, como cuando vas a comprar algo, el parametro es el dinero y el retorno es el producto o servicio
+// en este caso la funcion solicita un nombre y un apellido como pago y retorna un texto
+// nombre esta representado por la variable INTERNA llamada "name" y aunque la variable INTERNA diga apellido como la externa, NO son la misma variable, esta solo recibe el valor de la externa
     return "el nombre es: "+name +" "+apellido
 }
 
-
+// aqui llamamos a la funcion "cadena" y como parametro le enviamos 2 variables, "nombre" y "apellido", cada una tiene un valor propio y este valor es lo que esta recibiendo la funcion
+// en este caso le asignamos la funcion a imprimir ya que esta tiene como valor lo que se encuentra en su "return"
 const imprimir = cadena(nombre, apellido)
 
+// para comprobar imprimimos la variable que contiene a la funcion y esta debe imprimir el valor de la funcion
+// asi como podemos decir "variable=funcion" podemos usar a la funcion de la misma manera en la que se usa una variable comun y corriente, con lo cual "console.log(imprimir)" es lo mismo que decir "console.log(cadena(nombre, apellido))"
 console.log(imprimir)
